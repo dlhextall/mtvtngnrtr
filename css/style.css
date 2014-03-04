@@ -1,0 +1,99 @@
+/* GLOBAL */
+* {
+	font-family: Helvetica;
+}
+html {
+	min-height: 100%;
+	background: #fff;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fff;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+a:link, a:visited, a:hover, a:active {
+	color: #fff;
+}
+
+div#general {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 30%;
+	left: 0;
+	width: 100%;
+}
+img.bg {
+	/* Set rules to fill background */
+	min-height: 100%;
+	min-width: 1024px;
+
+	/* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+
+	/* Set up positioning */
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -999999;
+}
+
+/* HEADER */
+header {
+	margin: 20px 25px 10px 0;
+}
+header.right {
+	text-align: right;
+}
+h1 {
+	margin: 2px 0 0 0;
+}
+ul#lang_chooser li, ul#bg_chooser li {
+	display: inline;
+	font-size: 10pt;
+}
+ul#lang_chooser li:not(:last-child):after, ul#bg_chooser li:not(:last-child):after {
+	content: " |";
+}
+span.legend {
+	font-size: 8pt;
+}
+
+/* CONTENT */
+div#contenu {
+	margin: 0 0 20px 25px;
+}
+div#contenu .twitterpost .text {
+	font-size: 48pt;
+}
+div#contenu .twitterpost .author {
+	font-size: 24pt;
+	padding-left: 15px;
+}
+div#new_message {
+	width: 205px;
+}
+div.formelem {
+	margin: 5px 0;
+	color: #000;
+}
+div.formelem label {
+	float: left;
+}
+div.formelem input, div.formelem select {
+	float: right;
+}
+section#facebook_sharing {
+	padding-top: 10px;
+}
+
+
+/* FOOTER */
+footer {
+	position: absolute;
+	bottom: 5px;
+	font-size: 8pt;
+}
