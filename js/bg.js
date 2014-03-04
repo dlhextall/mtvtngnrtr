@@ -8,7 +8,7 @@ function setBackgroundImage(_subreddit, _filternsfw) {
     _subreddit = _subreddit || 'cinemagraphs+perfectloops';
     _filternsfw = (typeof _filternsfw === "undefined" || _filternsfw == null) ? 1 : parseInt(_filternsfw);
     var images = new Array();
-    $.getJSON("http://www.reddit.com/r/" + _subreddit + "/.json?jsonp=?", function(data) {
+    $.getJSON("http://my.reddit.com/r/" + _subreddit + "/.json?jsonp=?", function(data) {
         $.each(data.data.children, function(i,item){
             if (item.data.url.toLowerCase().match(/.*\.(jpg|gif|jpeg|png)/)) {
                 if (_filternsfw == 1 && !item.data.over_18) {
