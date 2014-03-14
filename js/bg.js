@@ -4,7 +4,10 @@ function getRandomImage(_array) {
     return _array[random];
 }
 
-function setBackgroundImage(_subreddit, _filternsfw) {
+function setBackgroundImage(_subreddit, _filternsfw, _event) {
+    if (typeof _event !== "undefined") {
+        $("#" + _event.target.id).siblings("img").show();
+    }
     _subreddit = _subreddit || 'cinemagraphs+perfectloops';
     _filternsfw = (typeof _filternsfw === "undefined" || _filternsfw == null) ? 1 : parseInt(_filternsfw);
     var images = new Array();
@@ -19,25 +22,29 @@ function setBackgroundImage(_subreddit, _filternsfw) {
             }
         });
         var imgsrc = getRandomImage(images);
-        $("img.bg").attr('src', imgsrc);
+        $("img.bg").attr('src', imgsrc).load(function() {
+            if (typeof _event !== "undefined") {
+                $("#" + _event.target.id).siblings("img").hide();
+            }
+        });
     });
 }
 
-function resetBackgroundImage() {
+function resetBackgroundImage(_event) {
     eraseCookie("subreddit");
     eraseCookie("filternsfw");
-    setBackgroundImage();
+    setBackgroundImage(null, null, _event);
 }
 
-function updateNSFW() {
+function updateNSFW(_event) {
     var filternsfw = parseInt(getCookie("filternsfw"));
     if (filternsfw == 0) {
         filternsfw = 1;
-        $("#nsfwfilter").html("enable nsfw");
+        $("#nsfwfilter_link").html("enable nsfw");
     } else {
         filternsfw = 0;
-        $("#nsfwfilter").html("disable nsfw");
+        $("#nsfwfilter_link").html("disable nsfw");
     }
-    setBackgroundImage(getCookie("subreddit"), filternsfw);
+    setBackgroundImage(getCookie("subreddit"), filternsfw, _event);
     setCookie("filternsfw", filternsfw);
 }

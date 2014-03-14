@@ -1,7 +1,16 @@
 $(document).ready(function() {
     var subreddit = getCookie("subreddit");
     setBackgroundImage(subreddit, getCookie("filternsfw"));
-    // refreshMessages("div.twitterpost", 5000);
+    refreshMessages("div.twitterpost", 5000);
+    $("#new_bg_link").click(function(event) {
+        setBackgroundImage(getCookie('subreddit'), getCookie("filternsfw"), event);
+    });
+    $("#reset_bg_link").click(function(event) {
+        resetBackgroundImage(event);
+    });
+    $("#nsfwfilter_link").click(function(event) {
+        updateNSFW(event);
+    });
     $("#custom_bg_link").click(function() {
         $("#custom_bg_chooser").slideToggle();
     });

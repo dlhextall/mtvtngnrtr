@@ -41,6 +41,12 @@ img.bg {
 	z-index: -999999;
 }
 
+img.loading {
+	height: 16px;
+	width: 16px;
+	display: none;
+}
+
 /* HEADER */
 header {
 	margin: 20px 25px 10px 0;
