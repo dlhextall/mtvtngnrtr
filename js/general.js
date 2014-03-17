@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    currentBG = "";
     var subreddit = getCookie("subreddit");
     setBackgroundImage(subreddit, getCookie("filternsfw"));
     refreshMessages("div.twitterpost", 5000);

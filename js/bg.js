@@ -1,7 +1,11 @@
 function getRandomImage(_array) {
-    var length = _array.length;
-    var random = Math.floor(Math.random() * length);
-    return _array[random];
+    var newBG = "";
+    do {
+        var random = Math.floor(Math.random() * _array.length);
+        newBG = _array[random];
+    } while (newBG === currentBG);
+    currentBG = newBG;
+    return newBG;
 }
 
 function setBackgroundImage(_subreddit, _filternsfw, _event) {
