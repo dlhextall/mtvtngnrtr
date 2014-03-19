@@ -13,6 +13,7 @@
         <meta charset="utf-8"/>
 
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
 
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/cookie.js"></script>

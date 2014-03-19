@@ -1,0 +1,29 @@
+@media screen and (max-device-width: 480px) {
+    div#general {
+        top: 0;
+        height: 100%;
+    }
+    div#contenu .twitterpost .text {
+        font-size: 30pt;
+    }
+    div#contenu .twitterpost .author {
+        font-size: 18pt;
+        padding-left: 15px;
+    }
+
+    img.bg {
+        /* Set rules to fill background */
+        min-height: 100%;
+        min-width: 480px;
+
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -999999;
+    }
+}
