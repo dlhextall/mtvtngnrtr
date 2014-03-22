@@ -16,10 +16,10 @@
         <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
 
         <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/general.js"></script>
         <script type="text/javascript" src="js/cookie.js"></script>
         <script type="text/javascript" src="js/bg.js"></script>
         <script type="text/javascript" src="js/messages.js"></script>
-        <script type="text/javascript" src="js/general.js"></script>
     </head>
     <body>
         <div id="general">
